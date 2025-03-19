@@ -22,8 +22,8 @@ Pg.preload = async function preload(this: S3PlayGround) {
     // Scratch3の画像エディターで加工、または複製した画像を使う場合では
     // 表示サイズ（縦横）が異なる。Scratch3用のSVG設定に変化してしまうため。
     // テキストエディターで <svg>タグ、<g>タグのサイズ設定を変更する必要がある。
-    this.Image.load('/assets/Jurassic.svg', Jurassic2);
-    this.Image.load('/assets/Jurassic2.svg', Jurassic);
+    this.Image.load('/assets/Jurassic.svg', Jurassic);
+    this.Image.load('/assets/Jurassic2.svg', Jurassic2);
     this.Sound.load(Scratch3LikeJsLib+'/web/assets/Chill.wav', Chill);
     this.Image.load(Scratch3LikeJsLib+'/web/assets/cat.svg', Cat);
     this.Sound.load(Scratch3LikeJsLib+'/web/assets/Cat.wav', Mya);
@@ -43,9 +43,9 @@ Pg.setting = async function setting() {
     stage.Event.whenFlag(async function*(this:S3Stage){
         for(;;){
             await this.Control.wait(1);
-            this.Looks.switchBackdrop(Jurassic2);
-            await this.Control.wait(1);
             this.Looks.switchBackdrop(Jurassic);
+            await this.Control.wait(1);
+            this.Looks.switchBackdrop(Jurassic2);
             yield;
         }
     });
