@@ -43,7 +43,6 @@ Pg.setting = async function setting() {
     stage.Event.whenFlag(async function*(this:S3Stage){
         for(;;){
             await this.Control.wait(1);
-            // ２番目に切り替えると 表示される背景の中心が右上にずれるバグがある
             this.Looks.switchBackdrop(Jurassic2);
             await this.Control.wait(1);
             this.Looks.switchBackdrop(Jurassic);
