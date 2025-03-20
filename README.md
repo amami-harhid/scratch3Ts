@@ -1,6 +1,6 @@
 # scratch3Ts
 tscratch3likejsを使ったTypescriptのサンプルです。
-webpackでbundleして利用します。
+ソースは１個だけを前提としたwebpackのです。
 
 ## install 
 npm init
